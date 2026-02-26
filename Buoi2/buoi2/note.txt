@@ -1,0 +1,121 @@
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+// Toán tử số học: +, -, *, /, %
+// Toán tử gán: =, +=, -=, *=, /=, %=
+// Toán tử so sánh: ==, !=, >, <, >=, <=
+/*
+ == : so sánh bằng vd: so1 == so2
+ != : so sánh khác vd so1 != so2
+ >, >= : so sánh lớn hơn , lớn hơn hoăc bằng 
+ <, <= : so sanh bé hơn , bé hơn hoặc bằng
+*/
+int so1 = 10;
+int so2 = 30;
+
+
+// 10 bằng 30  => sai 
+bool ketqua = so1 == so2 ;  // False
+Console.WriteLine($"Kêt quả của so sánh so1 = so2 là {ketqua}" ); // tạm thời chỉ trả ra true / false
+Console.WriteLine($"Kết quả của {so1} > {so2} { so1 > so2} ");
+Console.WriteLine($"Kết quả của {so1} >= {so2} { so1 >= so2} ");
+Console.WriteLine($"Kết quả của {so1} < {so2} { so1 < so2} ");
+Console.WriteLine($"Kết quả của {so1} <= {so2} { so1 <= so2} ");
+Console.WriteLine($"Kết quả của {so1} != {so2} { so1 != so2} ");
+
+
+// chuyển đổi kiểu dữ liệu
+
+// lấy dữ liệu từ input bàn phím qua Console.ReadLine() => trả về chuỗi string
+// người ta nhập số 123 => kiểu dữ liệu string "123"
+string chuoiSo = "123"; // nhân đôi là 246
+
+Console.WriteLine(chuoiSo + chuoiSo); 
+// 246 ??? kết quả sẽ là 123123 vì chuoiSo là kiểu string
+
+/*
+int : số nguyên thấp hơn long
+double : số thực (rộng số nguyên)  
+float: số thực
+decimal: số thực độ chính xác
+long: số nguyên 
+
+ 40 => là số nguyên , 
+
+
+
+
+
+
+
+*/
+// Chuyển đổi ngầm định từ nhỏ -> lớn
+int soNguyenA = 40;
+// chuyển soNguyenA từ int sang double
+double soThucA = soNguyenA;
+// double soThucA = (double) soNguyenA;
+
+// check kiểu dữ liệu  GetType
+Console.WriteLine("kiểu dữ liệu (KDL) của soNguyenA là: " + soNguyenA.GetType());
+Console.WriteLine("kiểu dữ liệu (KDL) của soThucA là: " + soThucA.GetType());
+
+// chuyển ngược lại từ double -> int (lớn -> nhỏ)
+double soThucB =8.9;
+// chuyển 8.49 về số nguyên int 
+int soNguyenB = (int)soThucB; // mất phần thập phân , chỉ lấy phần nguyên
+Console.WriteLine($"KDL của {soThucB} là: " + soThucB.GetType());
+Console.WriteLine($"KDL của {soNguyenB} là: " + soNguyenB.GetType());
+
+// chuyển đổi dùng 
+// thư viện có sẵn của .net 
+// Math 
+Console.WriteLine($"làm tròn {soThucB} thành: " + Math.Round(soThucB));
+Console.WriteLine(Math.Round(2.5)); //2 
+Console.WriteLine(Math.Round(3.5)); //4
+Console.WriteLine(Math.Round(4.5)); //4
+/* .Round thì có 1 số lưu ý 
+    - .5 thì nó sẽ làm tròn đến số chẵn gần nhất
+    - .9  thì làm tròn theo kiểu  banker là làm tròn .lớn hơn 5 thì làm tròn lên 
+           bé hơn .5 thì làm tròn xuống
+*/
+Console.WriteLine(Math.Ceiling(soThucB)); // làm tròn lên luôn 9.0
+var soThucC = (int) Math.Round(8.499999,MidpointRounding.AwayFromZero);
+Console.WriteLine($"Kiểu dữ liệu của {soThucC} là: " + soThucC.GetType()); // làm tròn .5 theo kiểu thông thường
+
+// chuyển chuỗi sang số string => int
+// int.Parse : nếu chuyển đổi được thì ok , không được thì lỗi
+// khi nào được : giá trị chuyển phải là chuỗi số
+// int soNguyenChuoiSo =(int)chuoiSo; // lỗi cannot convert
+int soNguyenChuoiSo = int.Parse(chuoiSo); // chuyển đổi chuỗi "123" => số nguyên
+Console.WriteLine($"Kiểu dữ liệu của {soNguyenChuoiSo} là {soNguyenChuoiSo.GetType()}");
+
+
+string chuoiChu = "một hai ba";
+//  
+//int soNguyenChuoiChu = int.Parse(chuoiChu); // lỗi định dạng chuỗi không đúng định dạng số
+
+// chuyển an toàn hơn dùng int.TryParse : cố gắng chuyển đối
+var chuyenDoi = int.TryParse(chuoiChu, out int soNguyenChuoiChu2);
+//
+// nhận được 2 thứ : biến chuyenDoi có kiểu bool 
+// thứ hai là : biến soNguyenChuoiChu2 có kiểu int
+Console.WriteLine($"Giá trị và Type của biến soNguyenChuoiChu2 {soNguyenChuoiChu2} là: {soNguyenChuoiChu2.GetType()} . Kết quả của chuyển đổi là {chuyenDoi} ");
+// chuyen
+
+// int có giá trị default là 0
+
+
+// chuyển đổi kiểu dữ liệu dùng Convert
+string chuoiSo4 = "456";
+int soNguyenChuoiSo4 = Convert.ToInt32(chuoiSo4);
+Console.WriteLine($"KDL của biến {soNguyenChuoiSo4} là: " + soNguyenChuoiSo4.GetType());
+
+Console.WriteLine(Convert.ToDouble("8.98765"));
+Console.WriteLine(Convert.ToBoolean("true"));
+
+
+
+
+
+
+
+

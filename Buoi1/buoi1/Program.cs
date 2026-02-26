@@ -211,8 +211,27 @@ c-=50; // c = 201 - 50 => 151 , gán cho c giá trị mới //
 Console.WriteLine($"Giá trị c sau khi -=50 là {c}"); // 151
 
 
-// 
+
+/*
+BIẾN 
+khai báo biến
+kiểu dữ liêu : value type: kiểu giá trị : int , double, bool, char, float, string, ..
+từ khoá var: tự động xác định kiểu dữ liệu dựa trên giá trị khởi tạo
+var thu = "Monday"; // tự động hiểu là kiểu string
+Quy tắc và quy ước đặt tên biến
+
+nối chuỗi
+    C1:  bằng dấu + 
+    C2: $"{}"
+
+Input , output
+
+Toán tử: 
+    Toán tử số học: + - * / % 
+    Toán tử gán: =, +=, -=, *=, /=, %=
 
 
+    
+*/
 
 
