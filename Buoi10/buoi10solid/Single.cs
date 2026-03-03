@@ -3,6 +3,11 @@
 - Mỗi class chỉ nên có một lý do để thay đổi, tức là chỉ nên có một trách nhiệm duy nhất.
 - Điều này giúp tăng tính dễ bảo trì, dễ hiểu và giảm sự phụ thuộc giữa các
 - class độc lập chỉ làm làm 1 nhiệm vụ cũ thể
+
+Facade Pattern: gom các class có tránh nhiệm khác nhau nhưng cùng 1 nhóm vào 1 class để dễ sử dụng
+
+Design Pattern: Mẫu thiết kế , giải pháp tổnge quả đã được kiểm chứng , 
+- VD: Mẫu nhà cấp 4 , Mẫu nhà 1 tầng , 2 tầng 3 tầng ...
 */
 public class ThanhToan
 {

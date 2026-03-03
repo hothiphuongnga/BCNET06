@@ -1,0 +1,26 @@
+{
+  "$type": "System.Collections.Generic.List`1[[NhanVien, buoi10solid]], System.Private.CoreLib",
+  "$values": [
+    {
+      "$type": "NhanVien, buoi10solid",
+      "MaNhanVien": 0,
+      "Ten": "nga",
+      "Luong1H": 1.0,
+      "SoGioLam": 1
+    },
+    {
+      "$type": "NhanVien, buoi10solid",
+      "MaNhanVien": 0,
+      "Ten": "nhu",
+      "Luong1H": 2.0,
+      "SoGioLam": 2
+    },
+    {
+      "$type": "NhanVien, buoi10solid",
+      "MaNhanVien": 3,
+      "Ten": "ba",
+      "Luong1H": 3.0,
+      "SoGioLam": 3
+    }
+  ]
+}

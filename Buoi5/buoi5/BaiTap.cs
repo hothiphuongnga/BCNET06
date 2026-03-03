@@ -29,7 +29,8 @@ class BaiTap
         {
             Console.WriteLine("Điểm không hợp lệ. Vui lòng nhập lại điểm từ 0 đến 10.");
         }
-        return diem;
+        return diem; 
+        Console.WriteLine(""); // dòng này sẽ không được thực hiện vì đã có return ở trên
     }
 
     public static double TinhDiemTrungBinh(double toan, double ly, double hoa)
