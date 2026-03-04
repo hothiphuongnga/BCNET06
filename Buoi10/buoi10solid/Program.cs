@@ -27,13 +27,13 @@ public class Program
         // canhCuc.Name = "Cánh cụt";
         // canhCuc.Bay(); //
 
-        // var zl = new ZaloOA("Hello");
-        // GuiThongBao guiThongBao = new GuiThongBao(zl);
-        // guiThongBao.Gui();
+        var zl = new ZaloOA("Hello");
+        GuiThongBao guiThongBao = new GuiThongBao(zl);
+        guiThongBao.Gui();
 
-        // var sms = new SMS();
-        // GuiThongBao guiThongBao2 = new GuiThongBao(sms);
-        // guiThongBao2.Gui();
+        var sms = new SMS();
+        GuiThongBao guiThongBao2 = new GuiThongBao(sms);
+        guiThongBao2.Gui();
 
 
 
@@ -52,23 +52,23 @@ public class Program
 
 
 
-        // var service  = new ServiceCollection();
+        var service  = new ServiceCollection();
 
-        // // đăng ký dịch vụ
-        // // khi gặp IThanhToanService thì sẽ trả về ThanhToanViDienTu
+        // đăng ký dịch vụ
+        // khi gặp IThanhToanService thì sẽ trả về ThanhToanViDienTu
 
-        // service.AddTransient<IThanhToanService, ThanhToanTienMat>();
+        service.AddTransient<IThanhToanService, ThanhToanTienMat>();
 
-        // // có thể đăng ký nhiều dịch vụ khác nhau
-        // service.AddTransient<DatHangService>(); // khởi tạo DatHangService mà không cần truyền tham số vào constructor
+        // có thể đăng ký nhiều dịch vụ khác nhau
+        service.AddTransient<DatHangService>(); // khởi tạo DatHangService mà không cần truyền tham số vào constructor
 
         
-        // // build service provider
-        // var serviceProvider = service.BuildServiceProvider();
+        // build service provider
+        var serviceProvider = service.BuildServiceProvider();
 
 
-        // var datHangServiceFromDI = serviceProvider.GetService<DatHangService>();
-        // datHangServiceFromDI.MuaHang(donHang);
+        var datHangServiceFromDI = serviceProvider.GetService<DatHangService>();
+        datHangServiceFromDI.MuaHang(donHang);
 
 
 

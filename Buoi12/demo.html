@@ -1,0 +1,86 @@
+<!-- Tạo tiêu đề, văn bản , hình ảnh và liên kết, form nhập liệu , ... -->
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+    <!--  cấu hình các thông cho trang web -->
+    <meta charset="UTF-8"> 
+    <!--  chỉnh reponsive - đa màn hình , kích thứớc-->
+      <!-- user-scalable=no : không cho người dùng phóng to hoặc thu nhỏ trang web , scale:  zoom in /out man hình -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+    <!--  tiêu đề trang web -->
+    <title>Document</title> <!-- tiêu đề trang web-->
+
+    <!--  cấu hình SEO  -->
+    <meta name="description" content="Đây là trang web giới thiệu về quán cà phê của chúng tôi. Chúng tôi cung cấp các loại cà phê ngon và không gian thoải mái để bạn thư giãn.">
+    <meta name="keywords" content="cafe, quán cà phê, đồ uống, không gian, thư giãn">
+
+    <style>
+        h1{ /* tất cả thẻ h1 sẽ có màu đỏ và nền vàng */
+            color: red;
+            background-color: yellow;
+        }
+        p{ /* tất cả thẻ p sẽ có màu hồng*/
+            color: pink;
+        }
+        .textWhite{ /* . đại diện cho class , tất cả class có tên là textWhite sẽ có màu trắng và nền đen */
+            color: white;
+            background-color: black;
+        }
+
+    </style>
+    <!--  liên kết file css ngoài -->
+      <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!--  noi code nội dung html cần hiển thị  -->
+      <!--  nhóm thẻ tiêu đề h1 -> h6 
+       1 page thì chỉ nên có 1 thẻ h1, các thẻ h2 -> h6 có thể sử dụng nhiều lần tùy theo nội dung  
+
+       h1 
+            h2
+                h3
+                h3
+                h3
+            h2
+                h3
+      -->
+    <h1> Chào mừng đến với trang web của tôi </h1>
+    <h1> Chào mừng đến với trang web của tôi </h1>
+    <h2> Đây là tiêu đề phụ 2 </h2>
+    <h3> Đây là tiêu đề phụ 3</h3>
+    <h4> Đây là tiêu đề phụ 4 </h4>
+    <h5> Đây là tiêu đề phụ 5</h5>
+    <h6 class="bgRed"> Đây là tiêu đề phụ 6</h6>
+
+    <!--  đoạn văn bản
+    thẻ p : thẻ block level (nghĩa là nó sẽ chiếm toàn bộ chiều rộng của phần tử cha và tạo một dòng mới sau khi kết thúc)  
+    -->
+      <p>Đây là một đoạn văn bản mẫu.</p>
+      <p style="color: green;">Đây là một đoạn văn bản mẫu màu xanh lá.</p>
+
+
+<!--  thẻ span: thẻ inline (nghĩa là nó chỉ chiếm không gian cần thiết cho nội dung bên trong và không tạo dòng mới) -->
+      <span>Đây là một đoạn văn bản trong thẻ span.</span>
+      <p class="textWhite" >Đây là một đoạn văn bản trong thẻ span màu trắng nền đen</p>
+
+      <!--  thể <strong>, <b>, <i>,...  inline -->
+        <p>Đây là một đoạn văn bản với <strong>chữ đậm</strong> và <i>chữ nghiêng</i>.</p>
+        <!--  thẻ chữ nhỏ <small> -->
+        <p class="textWhite">Đây là một đoạn văn bản với <small>chữ nhỏ</small>.</p>
+
+
+        <!--  thẻ hình ảnh, thẻ khuyết -->
+        <!-- thuộc tính : src, alt -->
+        <img src="https://upload.wikimedia.org/wikipedia/vi/5/5d/Doraemon_Movie_2025_Poster.jpge" alt="nội dung này sẽ hiển thị khi hình ảnh bị lỗi" />
+
+        <!--   -->
+        <!--  style là atribute - thuộc tính
+            color, backgound-color, font-size, font-family, ...: property  -->
+            <!--  đơn vị px -->
+        <h4 style = "color : red ; background-color: yellow; font-size: 30px; text-align: center;">Thẻ h4</h4>
+</body>
+
+</html>

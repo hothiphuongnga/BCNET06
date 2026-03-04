@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersoft café</title>
+
+<!--  css - ngôn ngữ dùng để trang trí  -->
+  <!-- có 3 dạng style css
+  - inline css: viết trực tiếp trong thẻ html bằng thuộc tính style  
+  - internal css: viết trong thẻ <style> trong file html
+  - external css: viết trong file css riêng và liên kết vào file html bằng thẻ <link>
+  -->
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--  tiêu đề -->
+    <!--  bảng màu : sẽ có 1 số màu có thể gọi bằng tên , ví dụ: red, blue, green, yellow, ...
+        màu bằng mã hex, ví dụ: #FF0000, #00FF00, #0000FF -->
+    <h1 style="color: #FFFFFF; background-color: #3a4a59; text-align: center;">Cybersoft café</h1>
+    <!--  thẻ liên kết -->
+    <!--  thẻ div: thẻ bọc nội dung, là thẻ block  -->
+    <div style="text-align: center;">
+        <a href="">Home</a>
+        <a href="#menu">Menu</a> <!--  liên kết nội -->
+        <a target="_blank" href="https://www.cybersoft.edu.vn" >Order</a><!--  liên kết ngoại -->
+    </div>
+    <!--  thẻ hr : thẻ kẻ ngang , thẻ khuyết-->
+    <!--  thuộc tính width: độ rộng của đường kẻ , 50%  -->
+    <hr width="50%" size="4px" color="#808080" />
+
+    <!--  tiều đề h2 -->
+    <h2 style="text-align: center; color: #996633">About</h2>
+
+    <!-- thẻ br : thẻ ngắt dòng -->
+    <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nobis harum
+        accusamus. <br>
+        Quis, commodi. <i>Repellat dolor ipsa voluptatibus veritatis vitae</i> <br>
+        animi quo cum saepe delectus nisi et minus amet expedita <b>aliquam temporibus voluptatem placeat,
+            molestias,</b> <br>
+        dolorem quisquam aut nihil beatae adipisci? Odio, <br>
+        quas blanditiis repellendus nostrum qui aperiam magnam unde.
+
+    </p>
+    <hr width="50%" size="4px" color="#808080" />
+    <h2 style="text-align: center; color: #996633">Special Items</h2>
+
+
+    <!--  thẻ danh sách -->
+    <h3>The coffee list 1</h3>
+
+    <!-- ul và li : thẻ danh sách không có thứ tự (unordered list) -->
+    <ul style="color: blue" type="circle">
+        <li style="color: blue">Black coffee</li>
+        <li>Pink coffee</li>
+        <li>Green</li>
+    </ul>
+    <!--  ther hinfh anhr -->
+    <!--  đường dẫn tuyệ đối: là đường dẫn đầy đủ từ gốc từ internet -->
+    <!--  đường dẫn tương dối: là đường dẫn từ vị trí hiện tại của file -->
+    <img src="./images/chilling-cafe-11.jpg" alt="Hình ảnh quán cà phê" width="200px" />
+    <img src="./images/chilling-cafe-12.jpg" alt="Hình ảnh quán cà phê" width="200px" />
+
+
+    <!-- ol và li : thẻ danh sách có thứ tự (ordered list) -->
+    <h3>The coffee list 2</h3>
+    <ol type="I">
+        <li>Soft Deli Cup</li>
+        <li>Coffee Art</li>
+        <li>Speciality Tea</li>
+        <li>Speciality Tea</li>
+    </ol>
+    <img src="./images/chilling-cafe-13.jpg" alt="Hình ảnh quán cà phê" width="400px" />
+
+    <hr width="50%" size="4px" color="#808080" />
+    <h2 id="menu" style="text-align: center; color: #996633">Menu</h2>
+
+
+    <!--  table - excel -->
+
+    <table align="center" border="1" cellspacing="0" cellpadding="10"  width="40%">
+        <tr>
+            <!--  DÒng 1 -->
+            <td colspan ="2">Name</td><!--  gom 2 ô lại thành 1 -->
+
+            <td>Type</td>
+            <td>Price</td>
+
+        </tr>
+        <!-- dòng 2 -->
+        <tr>
+            <td rowspan ="4" style="background-image: url(./images/chilling-cafe-13.jpg); color: #fff" >Traditional Coffee</td>
+            <td rowspan="2">Vietnamese coffee pin</td>
+            <td>Hot</td>
+            <td>60.000</td>
+            
+        </tr>
+        <!--  dòng 3 còn lại 2 ô -->
+        <tr>
+            <td>Cold</td>
+            <td>28.000</td>
+        </tr>
+        <!--  dòng 4 còn 3 ô -->
+        <tr>
+            <td rowspan="2">milk coffee</td>
+            <td>Hot</td>
+            <td>38.000</td>
+        </tr>
+        <!--  dòng 5 -->
+        <tr>
+            <td>Cold</td>
+            <td>54.000</td>
+        </tr>
+        <tr>
+            <td rowspan="3" style="background-image: url(./images/chilling-cafe-11.jpg); color: #fff">Expresso</td>
+            <td>Amecian Coffee</td>
+            <td rowspan="3">Hot</td>
+            <td>110.000</td>
+        </tr>
+        <tr>
+            <td>Machiato</td>
+            <td rowspan="2">40.000</td>
+        </tr>
+        <tr>
+            <td>Cappuchino</td>
+        </tr>
+
+
+    </table>
+
+
+
+    <hr width="50%" size="4px" color="#808080" />
+    <h2 style="text-align: center; color: #996633">Talk to us</h2>
+    <p style="text-align: center;">Reach us via <b>Email</b>: <a
+            href="mailto:cybercafe@gmail.com">cybercafe@gmail.com</a> or <b>Hotline</b>: <a href="tel:0961051014">0961
+            051 014</a> . Thank you</p>
+
+
+
+
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  <br/> Quas magni perspiciatis voluptatem harum! Vitae nisi modi fugit, sit enim animi consequatur sapiente ad provident cumque accusamus quisquam aperiam maiores, necessitatibus nostrum repellat dolores impedit sequi quo alias laudantium sint at obcaecati. Fugiat architecto corporis vel aliquid neque non nostrum culpa.</p> -->
+</body>
+
+</html>
